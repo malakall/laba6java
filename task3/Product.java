@@ -8,7 +8,7 @@ public class Product {
         this.price = price;
     }
 
-    // Геттеры для имени и цены
+
     public String getName() {
         return name;
     }

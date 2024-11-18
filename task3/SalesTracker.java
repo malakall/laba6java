@@ -11,12 +11,11 @@ public class SalesTracker {
         soldProducts = new ArrayList<>();
     }
 
-    // Метод для добавления проданного товара
+
     public void addProduct(Product product) {
         soldProducts.add(product);
     }
 
-    // Метод для вывода списка проданных товаров
     public void showSoldProducts() {
         if (soldProducts.isEmpty()) {
             System.out.println("Проданных товаров нет.");
@@ -28,16 +27,15 @@ public class SalesTracker {
         }
     }
 
-    // Метод для подсчета общей суммы продаж
-    public double getTotalSales() {
-        double totalSales = 0;
+    public int getTotalSales() {
+        int totalSales = 0;
         for (int i = 0; i < soldProducts.size(); i++) {
             totalSales += soldProducts.get(i).getPrice();
         }
         return totalSales;
     }
 
-    // Метод для определения наиболее популярного товара
+
     public String getMostPopularProduct() {
         if (soldProducts.isEmpty()) {
             return "Проданных товаров нет.";
@@ -62,6 +60,6 @@ public class SalesTracker {
         }
 
 
-        return mostPopular != null ? "Наиболее популярный товар: " + mostPopular : "Нет данных для определения.";
+        return mostPopular;
     }
 }
